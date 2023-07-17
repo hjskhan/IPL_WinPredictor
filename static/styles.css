@@ -1,0 +1,118 @@
+/* styles.css */
+
+/* Reset some default margin and padding */
+body, h1, form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a central theme to the form */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(41, 41, 41);
+    color: #fff;
+}
+
+.container {
+    background-color: rgba(77, 77, 77,0.4);
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 1000px;
+    margin: 20px auto; /* Center align the container with Flexbox */
+    display: flex; /* Use Flexbox for the container */
+    flex-direction: column; /* Stack rows one above the other */
+    /* justify-content: center; */
+}
+
+.heading {
+    background-color: rgba(180, 96, 96,0.5);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    display: flex;
+    /* flex-direction: column; */
+    text-align: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    font-weight: 800;
+    height: 12vh;
+    padding: 0.25rem;
+}
+
+.logo{
+    margin-right: 3rem;
+    width: 100px;
+}
+
+form {
+    width: 100%; /* Ensure the form takes full width within the container */
+}
+
+.row1,
+.row2,
+.row3,
+.row4 {
+    font-size: 1.35rem   ;
+    display: flex; /* Use Flexbox for rows */
+    justify-content: space-between; /* Spread columns evenly in rows */
+    margin-bottom: 20px; /* Add some space between rows */
+}
+
+.col1,
+.col2 {
+    flex: 1; /* Equal width for columns within a row */
+    padding: 5px; /* Optional: Add some space between columns */
+    margin-left: 5rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="number"],
+select {
+    width: 70%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: rgb(180, 96, 96);
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 400;
+    cursor: pointer;
+    width: 40%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(151, 79, 79);
+}
+
+/* Styling for the predictions */
+#predictions-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px auto;
+    /* padding: 5px; */
+    width: 50vh;
+    height: 6rem;
+    background-color: rgb(41, 41, 41);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Center align the submit button */
+.row4 {
+    display: flex;
+    justify-content: center;
+}
