@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Match Prediction</title>
+</head>
+<!-- Here's the list of IPL teams in alphabetical order:
+
+1. Chennai Super Kings
+2. Delhi Capitals
+3. Kings XI Punjab
+4. Kolkata Knight Riders
+5. Mumbai Indians
+6. Rajasthan Royals
+7. Royal Challengers Bangalore
+8. Sunrisers Hyderabad -->
+
+<body>
+    <h1>Cricket Match Prediction</h1>
+    <form action="/prediction" method="post">
+        <label for="batting_team">Batting Team</label>
+        <select id="batting_team" name="batting_team" required>
+            <option value="" disabled selected>Select a team</option>
+            <option value="1">Chennai Super Kings</option>
+            <option value="2">Delhi Capitals</option>
+            <option value="3">Kings XI Punjab</option>
+            <option value="4">Kolkata Knight Riders</option>
+            <option value="5">Mumbai Indians</option>
+            <option value="6">Rajasthan Royals</option>
+            <option value="7">Royal Challengers Bangalore</option>
+            <option value="8">Sunrisers Hyderabad</option>
+        </select><br>
+        
+        <label for="bowling_team">Bowling Team:</label>
+        <select id="bowling_team" name="bowling_team" required>
+            <option value="" disabled selected>Select a team</option>
+            <option value="1">Chennai Super Kings</option>
+            <option value="2">Delhi Capitals</option>
+            <option value="3">Kings XI Punjab</option>
+            <option value="4">Kolkata Knight Riders</option>
+            <option value="5">Mumbai Indians</option>
+            <option value="6">Rajasthan Royals</option>
+            <option value="7">Royal Challengers Bangalore</option>
+            <option value="8">Sunrisers Hyderabad</option>
+        </select><br>
+
+        <!-- <label for="run_scored">Run Scored:</label>
+        <input type="number" id="run_scored" name="run_scored" required><br> -->
+
+        <label for="balls_left">Balls Left</label>
+        <input type="number" id="balls_left" name="balls_left" required><br>
+
+        <label for="target">Target</label>
+        <input type="number" id="target" name="target" required><br>
+
+        <label for="wickets_left">Wickets Left:</label>
+        <input type="number" id="wickets_left" name="wickets_left" required><br>
+
+        <!-- <label for="Req_run_rate">Required Run Rate:</label>
+        <input type="number" step="0.01" id="Req_run_rate" name="Req_run_rate" required><br> -->
+
+        <label for="runs_left">Runs Left:</label>
+        <input type="number" id="runs_left" name="runs_left" required><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if predictions %}
+    <h2>Predicted Outcome:</h2>
+    <p>{{ predictions }}</p>
+    {% endif %}
+
+</body>
+
+</html>
